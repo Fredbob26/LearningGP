@@ -35,11 +35,6 @@ public class GameFlowManager : MonoBehaviour
     [Tooltip("Prefab for the lose game message")]
     public DisplayMessage loseDisplayMessage;
 
-    [Header("Ghost Driver")]
-    [Tooltip("The GhostDriver that will replay the best lap")]
-    public GhostDriver ghostDriver;
-    public Transform finishLine; // Объект финишной линии
-
     public GameState gameState { get; private set; }
 
     public bool autoFindKarts = true;
@@ -86,16 +81,6 @@ public class GameFlowManager : MonoBehaviour
         StartCoroutine(ShowObjectivesRoutine());
 
         StartCoroutine(CountdownThenStartRaceRoutine());
-
-        // Убедитесь, что GhostDriver неактивен в начале
-        if (ghostDriver != null)
-        {
-            ghostDriver.gameObject.SetActive(false);
-        }
-        else
-        {
-            Debug.LogError("GhostDriver не назначен в инспекторе!");
-        }
     }
 
     IEnumerator CountdownThenStartRaceRoutine()
@@ -159,30 +144,6 @@ public class GameFlowManager : MonoBehaviour
 
             if (m_TimeManager.IsFinite && m_TimeManager.IsOver)
                 EndGame(false);
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.transform == finishLine)
-        {
-            Debug.Log("Финишная линия пересечена");
-
-            float currentLapTime = m_TimeManager.IsFinite ? m_TimeManager.TotalTime - m_TimeManager.TimeRemaining : m_TimeManager.TotalTime;
-
-            // Проверка завершения круга
-            if (ghostDriver.bestLapTime == 0 || currentLapTime < ghostDriver.bestLapTime)
-            {
-                ghostDriver.bestLapTime = currentLapTime;
-                Debug.Log("Новый лучший круг: " + ghostDriver.bestLapTime);
-                ghostDriver.StopRecording();
-                ghostDriver.SaveBestFrames();
-                ghostDriver.StartRecording();
-            }
-
-            // Активируем GhostDriver и запускаем воспроизведение
-            ghostDriver.gameObject.SetActive(true);
-            ghostDriver.StartPlaying();
         }
     }
 

@@ -1865,40 +1865,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 259581650}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &146250293 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4810912518991602691, guid: 19954de30401f73428254541a9ad156e,
-    type: 3}
-  m_PrefabInstance: {fileID: 970074118}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &146250294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146250293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80ca27430148daf4091ea94a2f08e8ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kartTransform: {fileID: 146250300}
-  recordInterval: 0.1
-  bestLapTime: 0
---- !u!114 &146250295
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146250293}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: 7da111f8-2e45-4215-b055-642badd48387
 --- !u!4 &146250300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4810912518991602692, guid: 19954de30401f73428254541a9ad156e,
@@ -7116,7 +7082,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ghostDriver
       value: 
-      objectReference: {fileID: 146250294}
+      objectReference: {fileID: 0}
     - target: {fileID: 1315839542190839936, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
         type: 3}
       propertyPath: autoFindKarts
@@ -10159,20 +10125,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4810912518023495569, guid: 19954de30401f73428254541a9ad156e,
+    - target: {fileID: 4810912518023495582, guid: 19954de30401f73428254541a9ad156e,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4810912518023495569, guid: 19954de30401f73428254541a9ad156e,
+    - target: {fileID: 4810912518991602690, guid: 19954de30401f73428254541a9ad156e,
         type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810912518023495569, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
+      propertyPath: kartController
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4810912518991602691, guid: 19954de30401f73428254541a9ad156e,
         type: 3}
@@ -10182,17 +10143,7 @@ PrefabInstance:
     - target: {fileID: 4810912518991602691, guid: 19954de30401f73428254541a9ad156e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810912518991602691, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810912518991602692, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4810912518991602692, guid: 19954de30401f73428254541a9ad156e,
         type: 3}
@@ -10244,66 +10195,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4810912518991602694, guid: 19954de30401f73428254541a9ad156e,
+    - target: {fileID: 4810912518991602713, guid: 19954de30401f73428254541a9ad156e,
         type: 3}
-      propertyPath: baseStats.TopSpeed
-      value: 60
+      propertyPath: Kart
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4810912518991602694, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: baseStats.Acceleration
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810912518991602694, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: baseStats.AccelerationCurve
-      value: 0.635
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798798854743944591, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f2f7dfcd9efff134db45169f37e2a941, type: 2}
-    - target: {fileID: 7798798855870862448, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f2f7dfcd9efff134db45169f37e2a941, type: 2}
-    - target: {fileID: 7798798855870862450, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f2f7dfcd9efff134db45169f37e2a941, type: 2}
-    - target: {fileID: 7798798855870862452, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f2f7dfcd9efff134db45169f37e2a941, type: 2}
-    - target: {fileID: 7798798855870862454, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f2f7dfcd9efff134db45169f37e2a941, type: 2}
-    - target: {fileID: 7798798856373682650, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f2f7dfcd9efff134db45169f37e2a941, type: 2}
     m_RemovedComponents:
+    - {fileID: 4810912518991602694, guid: 19954de30401f73428254541a9ad156e, type: 3}
     - {fileID: 4810912518991602695, guid: 19954de30401f73428254541a9ad156e, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 403965902444250509, guid: 19954de30401f73428254541a9ad156e, type: 3}
-    - {fileID: 4810912518023495582, guid: 19954de30401f73428254541a9ad156e, type: 3}
+    - {fileID: 4810912518991602690, guid: 19954de30401f73428254541a9ad156e, type: 3}
+    - {fileID: 4810912518991602713, guid: 19954de30401f73428254541a9ad156e, type: 3}
+    - {fileID: 4810912518991602693, guid: 19954de30401f73428254541a9ad156e, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 146250295}
-    - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 19954de30401f73428254541a9ad156e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 146250294}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19954de30401f73428254541a9ad156e, type: 3}
 --- !u!1 &972543487
 GameObject:
@@ -18055,6 +17960,7 @@ GameObject:
   - component: {fileID: 1675554998}
   - component: {fileID: 1675554997}
   - component: {fileID: 1675554996}
+  - component: {fileID: 1675555000}
   m_Layer: 0
   m_Name: FinishLane
   m_TagString: Untagged
@@ -18081,7 +17987,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.4000689, y: 0.9999999, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1675554997
 MeshRenderer:
@@ -18148,6 +18054,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1675555000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675554995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89abde767f07a6b419c954e57746fb62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kartTransform: {fileID: 146250300}
+  player: {fileID: 1304724376}
+  recordInterval: 0.01
+  bestLapTime: 0
 --- !u!4 &1677385062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5043517943713643291, guid: f825600eaf118ef48b19d55e234266b1,
